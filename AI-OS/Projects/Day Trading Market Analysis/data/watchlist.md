@@ -16,6 +16,20 @@ reduced size, favor support bounces & range-scalps over breakouts.**
 | AVAX | Coinbase AVAX-USD | low/beaten | — | Deep value, no intraday trigger yet | 🟡 WATCH |
 | SUI | Coinbase SUI-USD | ~$1.1x | — | Resistance $1.21 / $1.40 overhead | 🟡 WATCH (no setup) |
 
+## Small / mid-cap scan (added 2026-06-11, fresh data)
+Higher intraday range than the majors — but tradability + liquidity gates applied hard.
+| Coin | Venue/Pair | Price | 24h | Read | Status |
+|---|---|---|---|---|---|
+| NEAR | Coinbase NEAR-USD | ~$2.17 | +2.9% | $2.00 critical support, res $2.20→$2.29, RSI 50 | 🟡 PENDING limit @ $2.04 (T-20260611-04) |
+| HYPE | Coinbase HYPE-USD | ~$54–58 | −4% | ~$1B/day vol (best liquidity); but −20% on week (downtrend) | 🟡 WATCH (reclaim $58 to activate) |
+| BEAT | — | ~$4.37 | +65% | NOT on Coinbase + exhaustion | 🔴 REJECT (untradable) |
+| DEXE | Coinbase? unconfirmed | ~$22.82 | +11–16% | Testing $24 res; US–Iran rally catalyst | 🔴 REJECT (tradability unconfirmed) |
+| RAIN | Coinbase? unconfirmed | ~$0.0133 | +6.3% | $49M vol; Enlivex treasury catalyst | 🟡 WATCH (confirm listing first) |
+
+**Macro note:** a Trump US–Iran peace headline is driving a risk-on alt bounce
+(BTC reportedly $62k→$64k). If it holds, the regime could flip from Extreme Fear —
+re-read sentiment at next session before assuming risk-off.
+
 ## Triggers to alert on next session
 - XRP: clean reclaim of $1.140 with volume → range-breakout long becomes valid.
 - BTC: loss of $63,000 on volume → flip bias risk-off, look for $62.5k retest.

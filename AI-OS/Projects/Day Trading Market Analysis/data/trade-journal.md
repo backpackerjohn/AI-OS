@@ -65,6 +65,35 @@ live price observed during the session. Nothing here is real or advice.
 
 ---
 
+## PENDING / WORKING ORDERS (not yet filled)
+
+### T-20260611-04 — NEAR-USD — LONG (TREND-PULLBACK) — small/mid-cap
+- **Created:** 2026-06-11 (Session 01 addendum — small-cap scan)
+- **Venue/Pair:** Coinbase · NEAR-USD
+- **Order type:** Working LIMIT @ **$2.04** (current price ~$2.17 sits at resistance —
+  we wait for a pullback to the $2.00 support shelf rather than buying the highs).
+- **Stop:** $1.93 (−5.4% from entry; below $2.00 critical support)
+- **T1:** $2.15 (+5.4%, take 50%)  ·  **T2:** $2.24 (+9.8%, runner)
+- **R:R:** 1.0 to T1 · **1.41 blended**
+- **Size (if filled):** ~454 NEAR · **Notional:** ~$927 · **Risk:** $50 (0.5%)
+- **Conviction:** 64/100
+- **Signals:** $2.00 support test · RSI 50 (neutral, room) · risk-on macro catalyst (US–Iran headline)
+- **Catalyst:** Broad alt rally on geopolitical optimism; NEAR reclaiming $2.
+- **Thesis:** Buy the pullback into $2.00 support, not the resistance at $2.20.
+  Invalidated below $1.93 (loss of $2 → path to $1.80).
+- **Mgmt:** Cancel if not filled by end of session OR if $2.00 breaks before fill.
+- **Status:** PENDING (fills only on a dip to $2.04)
+
+> Sizing note: risk $50 ÷ $0.11 stop ≈ **454 NEAR**, notional ≈ $927 at $2.04. Small-caps
+> get tighter notional caps due to volatility/spread; this is within the 0.5% risk rule.
+
+### HYPE-USD — WATCH (reclaim trigger) — best small/mid-cap liquidity (~$1B/day)
+- Not entered: HYPE is −20% on the week / −4% today (downtrend). No knife-catching.
+- **Trigger to activate:** reclaim and 15-min hold above **$58** on rising volume →
+  bounce long toward $62–64, stop $53.50. Re-evaluate next session.
+
+---
+
 ## CLOSED
 *(none yet — first session)*
 
