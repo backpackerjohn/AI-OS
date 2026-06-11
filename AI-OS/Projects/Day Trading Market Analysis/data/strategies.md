@@ -1,25 +1,46 @@
-# Strategies & Setups — running performance
+# Strategies / Setups — running win-rate & expectancy
 
-Each setup tracks a live win-rate and expectancy. The Journalist updates these
-after every review. Promote what works; demote/retire what doesn't.
+_Last updated: 2026-06-11 (Session 02)_
 
-> Status legend: 🆕 new (no data) · ✅ working (expectancy > 0) · ⚠️ on watch
-> (negative or thin) · ⛔ retired
+Each setup tracks closed-trade record, win-rate, expectancy (avg R), and a status
+(PROMOTE / TESTING / FLAGGED / DEMOTED). Append history; never delete prior records.
 
-| Setup | Status | Trades | Wins | Win-rate | Avg R | Notes |
-|---|---|---|---|---|---|---|
-| SUPPORT-BOUNCE | 🆕 | 2 | — | — | — | Long at confirmed support in Fear regimes. Seeded 2026-06-11 (SOL, BTC). |
-| TREND-PULLBACK | 🆕 | 0 | — | — | — | Buy the dip in an established uptrend. |
-| BREAKOUT | 🆕 | 0 | — | — | — | Range break on expanding volume. Favor in Greed/trend regimes. |
-| RANGE-SCALP | 🆕 | 0 | — | — | — | Fade defined channel edges. Needs R:R ≥ 1.3 — often fails the gate. |
-| RESISTANCE-FADE | 🆕 | 0 | — | — | — | Short/avoid into resistance (WATCH-ONLY on spot). |
-| MEAN-REVERSION (recovery) | 🆕 | 1 | — | — | — | Long a beaten-down major reclaiming a level. Seeded 2026-06-11 (ETH). |
+---
 
-## Strategy hypotheses to test (experiment backlog)
-1. **H1 — Buy proximity matters:** In Extreme Fear, SUPPORT-BOUNCE longs entered
-   within 0.5% of support outperform those entered 1%+ above. *(Testing now.)*
-2. **H2 — Skip the laggard:** When BTC/ETH/SOL all set up long together, the
-   strongest-relative-strength name beats the laggard. Track which of the three
-   correlated longs performs best per session.
-3. **H3 — Fear floor bounce:** Days with Fear & Greed ≤ 10 mean-revert intraday
-   more often than they trend down further. Tag each session's index and check.
+## SUPPORT-BOUNCE
+- Record: **0W / 2L** (T-20260611-01 BTC, T-20260611-02 SOL)
+- Win-rate: **0% (0/2)**
+- Expectancy: **-1.00R**
+- Status: **FLAGGED** ⚠
+- Notes: Both losers were market/early entries that assumed support would hold in
+  Extreme Fear. Support broke on a hot-CPI risk-off tape. Do NOT trade as a naked
+  "price is near support" long. Re-spec required: only valid with (a) a CONFIRMED
+  reclaim or rejection wick + volume, OR (b) a resting LIMIT at a structurally
+  major level (e.g. 200-week MA) with a hard macro-event de-risk rule. The Session
+  02 BTC limit (T-...-05) is the first re-spec'd test of this setup.
+
+## MEAN-REVERSION
+- Record: **0W / 1L** (T-20260611-03 ETH)
+- Win-rate: **0% (0/1)**
+- Expectancy: **-1.00R**
+- Status: **FLAGGED** ⚠
+- Notes: Failed because the tape was trending (risk-off), not ranging. Mean-reversion
+  needs a confirmed range / oversold + stabilization, not a falling knife. Suspend
+  until we have a regime filter (e.g. don't fade a trend day; require RSI divergence
+  or a higher-low before entry).
+
+## BREAKOUT-RECLAIM (NEW)
+- Record: **0W / 0L** (T-20260611-06 SOL pending/conditional)
+- Win-rate: n/a
+- Expectancy: n/a
+- Status: **TESTING** 🧪
+- Notes: Introduced Session 02 as the disciplined alternative to knife-catching.
+  Arms only on a confirmed 1h close above the level with volume. First live test is
+  the SOL >$67 conditional. This is the setup we WANT to validate.
+
+---
+
+### Setup leaderboard (by expectancy)
+1. BREAKOUT-RECLAIM — n/a (testing)
+2. SUPPORT-BOUNCE — -1.00R (flagged; re-spec under test)
+3. MEAN-REVERSION — -1.00R (flagged; suspended pending regime filter)

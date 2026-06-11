@@ -1,27 +1,67 @@
-# Signals Glossary — definitions & reliability scores
+# Signals Glossary — reliability scores
 
-Each signal has a reliability score (0-100, starts neutral at 50). The Journalist
-nudges it up when trades using it win, down when they lose. The Validator uses
-these scores to weight its confidence calculation, so the team's trust in each
-signal is **earned from results over time.**
+_Last updated: 2026-06-11 (Session 02)_
 
-| Signal | Reliability | Sample | Definition / how we read it |
-|---|---|---|---|
-| Support test + hold | 50 🆕 | 0 | Price reaches a prior support level and stops falling (lower wicks, slowing momentum). Long trigger on the reclaim/bounce. |
-| Oversold RSI (<30) | 50 🆕 | 0 | Intraday RSI in oversold territory — bounce fuel, but not a trigger alone. |
-| Volume confirmation | 50 🆕 | 0 | Move accompanied by rising volume = conviction; fading volume = suspect. |
-| Extreme Fear sentiment (F&G ≤ 10) | 50 🆕 | 0 | Contrarian bullish bias intraday; crowd capitulation often mean-reverts. |
-| Real positive catalyst (STRONG) | 50 🆕 | 0 | Verifiable news from a credible primary source driving the move. |
-| Resistance rejection | 50 🆕 | 0 | Price stalls/reverses at prior resistance — fade or avoid longs. |
-| Round-number level | 50 🆕 | 0 | Psychological levels ($63k BTC, $85 SOL) act as S/R magnets. |
-| ETF flow direction | 50 🆕 | 0 | Net spot ETF inflows/outflows as a multi-session demand proxy. |
+Reliability is a 0-100 score the validator uses to weight signals. We nudge it up
+when a signal contributed to a win, down when it contributed to a loss. Append the
+change history; never silently overwrite. Baseline for new signals = 50.
 
-## Anti-signals (red flags the Validator weeds out)
-| Anti-signal | Action | Why |
-|---|---|---|
-| Big % move on tiny volume | REJECT | Illiquid pump — spread/slippage kill the edge; manipulation risk. |
-| Parabolic + overbought + fading volume | REJECT long / WATCH fade | Exhaustion — chasing tops. |
-| "News" = the price move itself | Discount | Circular; no real catalyst. |
-| Stale catalyst recycled as fresh | Discount heavily | Already priced in. |
-| 3+ highly correlated ideas | Keep best, REJECT rest | Hidden concentration risk. |
-| No logical invalidation / R:R < 1.3 | REJECT | Can't define risk = no trade. |
+---
+
+## support-test-hold
+- Reliability: **40** (was 50, **-10**)
+- Record contribution: 0W / 3L (BTC, SOL, ETH all stopped)
+- Change log:
+  - 2026-06-11: -10. "Price is testing support" alone is NOT predictive of a hold.
+    In risk-off, support is where the knife lands. Needs confirmation (reclaim,
+    rejection wick, volume) before it counts.
+
+## extreme-fear contrarian
+- Reliability: **38** (was 50, **-12**)
+- Record contribution: 0W / 3L
+- Change log:
+  - 2026-06-11: -12. Extreme Fear is NOT a buy signal on its own — it can persist
+    and deepen when macro is deteriorating (hot CPI, hawkish Fed, ETF outflows).
+    Only useful paired with a stabilization/reversal trigger, not as a standalone
+    contrarian long. Heaviest demotion this round.
+
+## round-number
+- Reliability: **44** (was 50, **-6**)
+- Record contribution: 0W / 2L (BTC, SOL)
+- Change log:
+  - 2026-06-11: -6. Round numbers did not act as support in a trending tape. Weak
+    standalone signal; treat as minor confluence only.
+
+## 200wma-hold (NEW)
+- Reliability: **55** (baseline 50, +5 starting confidence)
+- Record contribution: pending (T-20260611-05)
+- Change log:
+  - 2026-06-11: Added. A structurally major level; higher prior than generic
+    support. Under test via the BTC resting limit.
+
+## discount-limit-entry (NEW)
+- Reliability: **52** (baseline 50)
+- Change log:
+  - 2026-06-11: Added. Resting limit at a discount avoids chasing/market knife-catch.
+    Under test.
+
+## confirmed-reclaim (NEW)
+- Reliability: **58** (baseline 50, +8 starting confidence)
+- Change log:
+  - 2026-06-11: Added. Requiring a confirmed close back above a level (on volume) is
+    the corrective to this session's failures. Higher prior because it directly
+    fixes the knife-catch error. Under test via SOL >$67 conditional.
+
+## volume-confirmation (NEW)
+- Reliability: **56** (baseline 50, +6)
+- Change log:
+  - 2026-06-11: Added. Volume on a reclaim/breakout filters fakeouts. Under test.
+
+---
+
+### Macro lesson (applies to all entry signals)
+Technical signals must be discounted when the MACRO regime is hostile. A hot CPI
+print + hawkish Fed + ETF outflows = risk-off; in that regime, every "support" /
+"contrarian fear" long is a knife-catch until a reclaim is confirmed. The validator
+should down-weight bullish-reversal signals when the macro calendar shows a
+near-term hot inflation print or FOMC.
