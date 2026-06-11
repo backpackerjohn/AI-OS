@@ -1,0 +1,14 @@
+### {ID} — {PAIR} — {LONG/SHORT} ({SETUP})
+- **Venue/Pair:** {Coinbase · PAIR}
+- **Entry (sim fill):** {price}
+- **Stop:** {price} ({%})
+- **T1:** {price} ({%}, take {%})  ·  **T2:** {price} ({%}, runner)
+- **R:R:** {to T1} · {blended}
+- **Size:** {units} · **Notional:** {$} · **Risk:** {$}
+- **Conviction:** {0-100}
+- **Signals:** {list}
+- **Catalyst/Macro:** {one line}
+- **Thesis:** {why; what invalidates it}
+- **Mgmt:** {stop→BE after T1; time-stop; intraday invalidation}
+- **Review at:** {time}
+- **Status:** OPEN
